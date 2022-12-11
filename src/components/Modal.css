@@ -1,0 +1,145 @@
+.modal-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 95%;
+    height: 60%;
+    
+    border-radius: 50px;
+    background-color: rgb(201, 201, 201);
+    z-index: 50;
+    position: fixed;
+    right: 2.5%;
+    top: 20%;
+    overflow: auto;
+    animation: to-bottom 0.2s alternate linear;
+    overflow: auto;
+    
+
+}
+
+.modal {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(87, 87, 87, 0.356);
+    overflow: hidden;
+    
+}
+
+
+.modal.active {
+    animation: from-bottom 0.2s alternate linear;
+
+}
+
+.modal-pokemon-data {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: left; 
+    min-height: 200px;
+}
+
+.modal-pokemon-data p {
+    width: 60%;
+    margin: 5px 0px 30px 0px;
+
+    font-size: clamp(3vw, 2vw, 2vw);
+}
+main {
+    display: flex;
+    width: 100%;
+    height: 70%
+}
+
+header {
+
+    display: flex;
+    position: absolute;
+    top: 1em;
+    
+}
+
+header h1 {
+    font-size: clamp(2vh, 2vw, 2vw);
+    text-transform: uppercase;
+}
+
+.close-button {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.8em;
+    cursor: pointer;
+    position: absolute;
+    right: 25px;
+    top: 25px;
+}
+
+.close-button:hover {
+    transform: scale(110%);
+}
+
+.img-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-right: 1px solid black;
+    min-width: 10px;
+}
+
+.col-1 {
+    flex: 1;
+    
+}
+
+.col-2 {
+    flex: 2;
+}
+
+
+
+@keyframes from-bottom {
+    0% {
+        transform: scale(-0%);
+    }
+
+    25% {
+        transform: scale(25%);
+    }
+
+    50% {
+        transform: scale(50%);
+    }
+
+    100% {
+        transform: scale(100%);
+    }
+}
+
+@keyframes to-bottom {
+
+    0% {
+        transform: scale(100%);
+    }
+
+    25% {
+        transform: scale(50%);
+    }
+
+    50% {
+        transform: scale(25%);
+    }
+
+    100% {
+        transform: scale(0%);
+    }
+
+}
+

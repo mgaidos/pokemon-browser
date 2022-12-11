@@ -1,0 +1,28 @@
+#root {
+  font-family: 'Pokemon Solid', sans-serif;
+  width: 900px;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+.next-pokemon-button {
+
+  margin-top: 15px;
+  padding: 1em 4em;
+  background: #74b210;
+  border: 3px solid;
+  border-radius: .5rem;
+  color: #444;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: .2rem;
+  text-align: center;
+  outline: none;
+  cursor: pointer;
+  transition: .2s ease-in-out;
+}
+
+.next-pokemon-button:hover {
+  transform: scale(105%);
+}

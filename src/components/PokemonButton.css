@@ -1,0 +1,19 @@
+.one-button {
+    font-family: 'Pokemon Solid', sans-serif;
+    font-size: 1.2rem;
+    width: clamp(100px, 50%, 350px);
+    height: 80px;
+    margin: 10px;
+    transition: all 0.2s ease-in;
+    border-radius: 10px;
+    border: none;
+
+}
+
+.one-button:hover {
+    cursor: pointer;
+    transform: scale(120%);
+    -webkit-box-shadow: -4px 15px 61px -12px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: -4px 15px 61px -12px rgba(0, 0, 0, 0.75);
+    box-shadow: -4px 15px 61px -12px rgba(0, 0, 0, 0.75);
+}

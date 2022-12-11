@@ -22,7 +22,6 @@ const Modal = (props: Props) => {
       await axios.get(props.urlPokemon)
         .then(function (response) {
           const types = response.data.types
-          console.log(types)
           const justTypes = types.map((element: any) => {
             return element.type.name
           })
@@ -31,6 +30,8 @@ const Modal = (props: Props) => {
           setPokemonWeight(response.data.weight)
           setPokemonHeight(response.data.height)
           setPokemonImage(response.data.sprites.front_default)
+          
+          
         })
         .catch(function (error) {
           console.log(error);
@@ -60,6 +61,8 @@ const Modal = (props: Props) => {
     fairy: '#D685AD',
   }
 
+ 
+
   const modalStyle = {
     backgroundColor: colours[pokemonType[0]],
     boxShadow: `0px 0px 25px 0px ${colours[pokemonType[0]]}`
@@ -77,7 +80,7 @@ const Modal = (props: Props) => {
         
         <main>
           <article className='img-wrapper col-1'>
-            <img src={pokemonImage} alt="" style={{ minWidth: "150px" }} />
+           <img src={pokemonImage} alt="" style={{ minWidth: "150px" }} />
           </article>
 
           <article className='modal-pokemon-data col-2'>

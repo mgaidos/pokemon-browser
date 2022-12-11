@@ -37,7 +37,7 @@ function App() {
   return (
     <div className="App">
       <h1 className='main-heading'>Pokémon Browser</h1>
-      {namePokemon.map((item, index) => <PokemonButton idPokemon={index + 1} key={index} name={item.name} urlPokemon={item.url} />)}
+      {namePokemon.map((item:any, index) => <PokemonButton idPokemon={index + 1} key={index} name={item.name} urlPokemon={item.url} />)}
 
       <button className='next-pokemon-button' onClick={() => nextPokemons()}>NEXT</button>
 
